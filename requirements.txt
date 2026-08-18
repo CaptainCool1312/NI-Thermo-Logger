@@ -1,0 +1,5 @@
+nidaqmx
+PyYAML
+Flask
+waitress
+pandas

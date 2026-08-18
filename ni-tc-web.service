@@ -1,0 +1,15 @@
+[Unit]
+Description=NI Temperature Logger Web Interface
+After=network-online.target ni-tc-logger.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=YOUR_USERNAME
+WorkingDirectory=/opt/ni-tc-logger
+ExecStart=/opt/ni-tc-logger/.venv/bin/python /opt/ni-tc-logger/webapp.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

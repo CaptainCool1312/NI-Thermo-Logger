@@ -1,0 +1,61 @@
+device: "cDAQ1Mod1"
+
+# Channels on the NI-9213. Change this list to match your installation.
+channels:
+  - name: "T01"
+    physical: "ai0"
+    description: "Thermocouple 1"
+  - name: "T02"
+    physical: "ai1"
+    description: "Thermocouple 2"
+  - name: "T03"
+    physical: "ai2"
+    description: "Thermocouple 3"
+  - name: "T04"
+    physical: "ai3"
+    description: "Thermocouple 4"
+  - name: "T05"
+    physical: "ai4"
+    description: "Thermocouple 5"
+  - name: "T06"
+    physical: "ai5"
+    description: "Thermocouple 6"
+  - name: "T07"
+    physical: "ai6"
+    description: "Thermocouple 7"
+  - name: "T08"
+    physical: "ai7"
+    description: "Thermocouple 8"
+  - name: "T09"
+    physical: "ai8"
+    description: "Thermocouple 9"
+  - name: "T10"
+    physical: "ai9"
+    description: "Thermocouple 10"
+
+# Sampling/logging interval in seconds.
+sample_interval_s: 5
+
+# Type K thermocouple.
+thermocouple_type: "K"
+
+# NI-9213 input range. Conservative default.
+min_temp_c: -200
+max_temp_c: 1372
+
+# Files
+data_dir: "/home/pe/data_logger/data"
+database: "/home/pe/data_logger/data/measurements.sqlite3"
+csv_dir: "/home/pe/data_logger/data/csv"
+log_file: "/home/pe/data_logger/data/logger.log"
+
+# Web interface
+web_host: "0.0.0.0"
+web_port: 8080
+
+# Keep the latest N days in the SQLite database.
+# Set to 0 to keep everything.
+retention_days: 0
+
+# Logging
+log_file: "./data/logger.log"
