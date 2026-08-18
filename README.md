@@ -180,17 +180,5 @@ dies.
 SQLite is the primary database. Daily CSV files provide a simple portable
 export.
 
-## Recommended next improvements
-
-For a real long-term measurement campaign, add:
-
-- automatic daily database backup
-- disk-space monitoring
-- temperature alarms
-- thermocouple open-circuit detection
-- watchdog hardware/software
-- NTP time synchronization
-- Tailscale/WireGuard for remote access
-- optional historical graphs
-- configuration through the web interface
-- measurement metadata / campaign ID
+### Remote access to the logg-pc via tailscale
+Webinterface on local port 8080 for livedisplay, access to log data via ssh
